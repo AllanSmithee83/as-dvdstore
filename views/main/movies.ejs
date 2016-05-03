@@ -1,0 +1,23 @@
+<% layout('layout') -%>
+
+
+<div class="container">
+
+  <div class="row">
+
+    <% for (var i = 0; i < dvds.length; i++) { %>
+    <div class="col-md-4">
+      <a href="/movie/<%= dvds[i]._id %>">
+        <div class="thumbnail">
+          <img src="<%= dvds[i].image %>">
+          <div class="caption">
+            <h3><%= dvds[i].name %></h3>
+            <p><%= dvds[i].ganre %></h3>
+            <p><%= dvds[i].price %>.din</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% } %>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<% layout('layout') -%>
+
+<div class="row">
+  <div class="col-lg-6 col-md-offset-3">
+
+    <% if (message.length > 0) { %>
+      <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismmiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= message %>
+      </div>
+    <% } %>
+
+    <form method="post">
+
+      <h1> Add a new Movie </h1>
+      <div class="form-group">
+        <label="name">Name: </label>
+        <input type="text" class="form-control" name="name">
+      </div>
+	  <div class="form-group">
+        <label="ganre">Ganre: </label>
+        <input type="text" class="form-control" name="ganre">
+      </div>
+	  <div class="form-group">
+        <label="director">Director: </label>
+        <input type="text" class="form-control" name="director">
+      </div>
+	  <div class="form-group">
+        <label="year">Year: </label>
+        <input type="text" class="form-control" name="year">
+      </div>
+	   <div class="form-group">
+        <label="price">Price: </label>
+        <input type="text" class="form-control" name="price">
+      </div>
+	   <div class="form-group">
+        <label="image">image: </label>
+        <input type="text" class="form-control" name="image">
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+	  
+	
+    </form>
+  </div>
+</div>
